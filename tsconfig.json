@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "ES2020", /* Modern JavaScript language features */
+    
+    /* Modules */
+    "module": "ESNext", /* Supports ES module output */
+    "rootDir": "./src", /* Ensure source files are in the 'src' folder */
+    "outDir": "./dist", /* Emit compiled files to the 'dist' folder */
+    "moduleResolution": "Node", /* Default for Node.js projects */
+    
+    /* JavaScript Support */
+    "allowJs": true, /* Allow JavaScript files */
+    "checkJs": true, /* Type check JavaScript files */
+
+    /* Emit */
+    "noEmitOnError": true, /* Avoid output if errors exist */
+
+    /* Interop Constraints */
+    "esModuleInterop": true, /* Improve compatibility for CommonJS modules */
+    "forceConsistentCasingInFileNames": true, /* Enforce consistent casing */
+
+    /* Type Checking */
+    "noImplicitAny": true, /* Disallow implicit 'any' types */
+    "strictNullChecks": true, /* Check for 'null' and 'undefined' */
+    "strictFunctionTypes": true, /* Strict function type checks */
+    "strictBindCallApply": true, /* Strict checks for 'bind', 'call', 'apply' */
+    "strictPropertyInitialization": true, /* Ensure class properties are initialized */
+    "noImplicitThis": true, /* Error for implicit 'this' */
+    "exactOptionalPropertyTypes": true, /* Exact types for optional properties */
+    "noImplicitReturns": true, /* Ensure all codepaths return a value */
+    "noImplicitOverride": true /* Require 'override' modifier for overridden members */
+  },
+  "include": ["src/**/*"], /* Include all files in the 'src' folder */
+  "exclude": ["node_modules", "dist"] /* Exclude 'dist' and dependencies */
+}
