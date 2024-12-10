@@ -6,13 +6,13 @@ CREATE DATABASE temp;
 
 SELECT pg_terminate_backend(pg_stat_activity.pid)
 FROM pg_stat_activity
-WHERE pg_stat_activity.datname = 'employeeTracker_db'
+WHERE pg_stat_activity.datname = 'employee_tracker_db'
   AND pid <> pg_backend_pid();
 
-DROP DATABASE IF EXISTS employeeTracker_db;
-CREATE DATABASE employeeTracker_db;
+DROP DATABASE IF EXISTS employee_tracker_db;
+CREATE DATABASE employee_tracker_db;
 
-\c employeeTracker_db;
+\c employee_tracker_db;
 
 CREATE TABLE Department (
     id SERIAL PRIMARY KEY,
