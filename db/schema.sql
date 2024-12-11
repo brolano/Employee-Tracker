@@ -14,12 +14,12 @@ CREATE DATABASE employee_tracker_db;
 
 \c employee_tracker_db;
 
-CREATE TABLE Department (
+CREATE TABLE department (
     id SERIAL PRIMARY KEY,
     name VARCHAR(30) UNIQUE NOT NULL
 );
 
-CREATE TABLE Role (
+CREATE TABLE role (
     id SERIAL PRIMARY KEY,
     title VARCHAR(30) UNIQUE NOT NULL,
     salary DECIMAL NOT NULL,
@@ -27,12 +27,12 @@ CREATE TABLE Role (
     FOREIGN KEY (department_id) REFERENCES Department(id) ON DELETE CASCADE
 );
 
-CREATE TABLE Employee (
+CREATE TABLE employee (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
     role_id INTEGER NOT NULL,
     manager_id INTEGER,
-    FOREIGN KEY (role_id) REFERENCES Role(id) ON DELETE CASCADE,
-    FOREIGN KEY (manager_id) REFERENCES Employee(role_id) ON DELETE SET NULL
+    FOREIGN KEY (manager_id) REFERENCES employee(id),
+    FOREIGN KEY (role_id) REFERENCES role(id)
 );
