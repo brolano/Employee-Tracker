@@ -21,6 +21,8 @@ To be able to update and add information by using typescript to leverage informa
 
 ## How to Video
 
+https://drive.google.com/file/d/1hBjTq0W4B5VxIsaCmH0BpJk70B7oZ7Lg/view
+
 
 
 
